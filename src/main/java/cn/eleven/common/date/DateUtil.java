@@ -4,21 +4,33 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static cn.eleven.common.date.DateUtil.DatePatten.PATTEN_TO_DAY;
+
 /**
  * @author: eleven
  * @date: 2018/9/7 19:43
  * @description: 日期类型工具
  */
 public class DateUtil {
-
-    public static final int PATTEN_TO_DAY = 1;
-    public static final int PATTEN_TO_SECOND = 2;
+    /**
+     * 转换格式常量
+     */
+    public enum DatePatten{
+        /**
+         * 转换到天
+         */
+        PATTEN_TO_DAY,
+        /**
+         * 转换到秒
+         */
+        PATTEN_TO_SECOND
+    }
     public static SimpleDateFormat sdfToDay = new SimpleDateFormat("yyyy-MM-dd");
     public static SimpleDateFormat sdfToSecond = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     private static String errMsg = "转换失败，时间参数格式错误";
 
 
-    public static Date toDate(String timeStr, int patten) {
+    public static Date toDate(String timeStr,DatePatten patten) {
         Date result = null;
         try {
             if (patten == PATTEN_TO_DAY) {
@@ -32,7 +44,7 @@ public class DateUtil {
         return result;
     }
 
-    public static String toString(Date date, int patten) {
+    public static String toString(Date date, DatePatten patten) {
         String result = null;
         try {
             if (patten == PATTEN_TO_DAY) {
@@ -53,7 +65,7 @@ public class DateUtil {
      * @param patten
      * @return
      */
-    public static String toStandardFormatString(long second, int patten) {
+    public static String toStandardFormatString(long second, DatePatten patten) {
         Date date = new Date(second);
         return toString(date, patten);
     }
