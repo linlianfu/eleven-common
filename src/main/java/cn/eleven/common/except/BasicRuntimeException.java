@@ -16,21 +16,13 @@ public class BasicRuntimeException extends RuntimeException{
      */
     private ErrCodeConstant errCode;
 
-    public BasicRuntimeException(){}
 
-    public BasicRuntimeException(ErrCodeConstant errorCode)
-    {
+    public BasicRuntimeException(ErrCodeConstant errorCode) {
         this.errCode = errorCode;
     }
 
-    public BasicRuntimeException(String message)
-    {
+    public BasicRuntimeException(String message) {
         super(message);
-    }
-
-    public BasicRuntimeException(String message,ErrCodeConstant errorCode){
-        super(message);
-        this.errCode = errorCode;
     }
 
     @Override

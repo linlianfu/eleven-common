@@ -9,6 +9,8 @@ import lombok.Data;
  */
 @Data
 public class ErrCodeConstant {
+
+    protected static final String NEWLINE = "\r\n";
     /**
      * 异常code
      */
@@ -32,7 +34,7 @@ public class ErrCodeConstant {
         sbf.append(",");
         sbf.append("message:");
         sbf.append(this.message);
-        sbf.append("}\r\n");
+        sbf.append("}"+NEWLINE);
         return sbf.toString();
     }
 }

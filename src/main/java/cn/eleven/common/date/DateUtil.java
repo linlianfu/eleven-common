@@ -12,6 +12,11 @@ import static cn.eleven.common.date.DateUtil.DatePatten.PATTEN_TO_DAY;
  * @description: 日期类型工具
  */
 public class DateUtil {
+
+    public static SimpleDateFormat sdfToDay = new SimpleDateFormat("yyyy-MM-dd");
+    public static SimpleDateFormat sdfToSecond = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private static String errMsg = "转换失败，时间参数格式错误";
+
     /**
      * 转换格式常量
      */
@@ -25,10 +30,6 @@ public class DateUtil {
          */
         PATTEN_TO_SECOND
     }
-    public static SimpleDateFormat sdfToDay = new SimpleDateFormat("yyyy-MM-dd");
-    public static SimpleDateFormat sdfToSecond = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    private static String errMsg = "转换失败，时间参数格式错误";
-
 
     public static Date toDate(String timeStr,DatePatten patten) {
         Date result = null;
