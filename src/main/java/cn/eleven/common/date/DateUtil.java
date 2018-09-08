@@ -61,6 +61,23 @@ public class DateUtil {
     }
 
     /**
+     * 获取当前时间并且格式化
+     * @param patten
+     * @return
+     */
+    public static Date getCurrentDate(DatePatten patten){
+        return toDate(toString(new Date(),patten),patten);
+    }
+    /**
+     * 获取当前时间并且格式化
+     * @param patten
+     * @return
+     */
+    public static String getCurrentDateString(DatePatten patten){
+        return toString(new Date(),patten);
+    }
+
+    /**
      * 将second类型转为标准的格式时间
      * @param second
      * @param patten
