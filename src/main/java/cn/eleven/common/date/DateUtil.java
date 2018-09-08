@@ -80,7 +80,7 @@ public class DateUtil {
      * @return
      */
     public static String dateConvert(int sec){
-        String date = String.format("%02d:%02d:%02d", sec / 60 / 60 % 60 ,sec / 60 % 60, sec % 60);
+        String date = String.format("%s:%s:%s", sec / 60 / 60 % 60 ,sec / 60 % 60, sec % 60);
         return date;
     }
 }
