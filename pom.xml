@@ -110,4 +110,55 @@
             <version>${slf4j_version}</version>
         </dependency>
     </dependencies>
+    <build>
+        <finalName>eleven-common</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!--如果没有配置此插件，则打包生成的jar包没有源码包-->
+                <!--引入改包的地方看不到源码，只能看到class文件-->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <!--可在子模块自定义打包规则,子模块无定义,则按照顶级模块规则-->
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+
+            <!--压包的时候，千万将xml的文件一起压包，否则会造成spring扫描的时候会扫描对应xml文件
+            而xml文件包括mybatis文件，mybatis会扫描对应的包下的dto，导致引用该包的消费端包也必须要
+            有同样的dto，否则会报类找不到的异常-->
+            <!--使用多模块已经解决此问题，多模块开发，客户端只需要引入API包，
+            API包没有只提供接口，没有xml文件-->
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>
