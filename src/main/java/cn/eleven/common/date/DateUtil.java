@@ -7,9 +7,9 @@ import java.util.Date;
 import static cn.eleven.common.date.DateUtil.DatePatten.PATTEN_TO_DAY;
 
 /**
- * @author: eleven
- * @date: 2018/9/7 19:43
- * @description: 日期类型工具
+ * @author eleven
+ * @date 2018/9/7
+ * @description 日期类型工具
  */
 public class DateUtil {
 

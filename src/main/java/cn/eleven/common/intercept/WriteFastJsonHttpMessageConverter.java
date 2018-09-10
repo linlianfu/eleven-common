@@ -12,7 +12,7 @@ import java.io.OutputStream;
 
 /**
  * @author: eleven
- * @date: 2018/4/7 17:12
+ * @date: 2018/4/7
  * @description:
  */
 public class WriteFastJsonHttpMessageConverter extends FastJsonHttpMessageConverter {
