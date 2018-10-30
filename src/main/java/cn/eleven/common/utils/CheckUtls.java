@@ -20,7 +20,7 @@ public class CheckUtls {
      * @param str
      * @param errMsg
      */
-    public void notBlank(String str,String errMsg){
+    public static void notBlank(String str,String errMsg){
         if (StringUtils.isBlank(str))
             throw new BasicRuntimeException(errMsg);
     }
@@ -29,7 +29,7 @@ public class CheckUtls {
      * @param str
      * @param errCode
      */
-    public void notBlank(String str, ErrCodeConstant errCode){
+    public static void notBlank(String str, ErrCodeConstant errCode){
         if (StringUtils.isBlank(str))
             throw new BasicRuntimeException(errCode);
     }
@@ -39,7 +39,7 @@ public class CheckUtls {
      * @param arr
      * @return
      */
-    public boolean existBlankStr(String... arr){
+    public static boolean existBlankStr(String... arr){
         if (ArrayUtils.isEmpty(arr))
             return false;
         for (String s : arr) {
@@ -54,7 +54,7 @@ public class CheckUtls {
      * @param arr
      * @return
      */
-    public boolean isBlankStrArr(String... arr){
+    public static boolean isBlankStrArr(String... arr){
         if (ArrayUtils.isEmpty(arr))
             return true;
         for (String s : arr) {
@@ -69,7 +69,7 @@ public class CheckUtls {
      * @param msg
      * @param arr
      */
-    public void isBlankStrArr(String msg,String... arr){
+    public static  void isBlankStrArr(String msg,String... arr){
         if (isBlankStrArr(arr))
             throw new BasicRuntimeException(msg);
     }
@@ -78,7 +78,7 @@ public class CheckUtls {
      * @param errCode
      * @param arr
      */
-    public void isBlankStrArr(ErrCodeConstant errCode,String... arr){
+    public static void isBlankStrArr(ErrCodeConstant errCode,String... arr){
         if (isBlankStrArr(arr))
             throw new BasicRuntimeException(errCode);
     }
@@ -88,7 +88,7 @@ public class CheckUtls {
      * @param coll
      * @param errMsg
      */
-    public void noeEmpty(Collection coll,String errMsg){
+    public static void notEmpty(Collection coll,String errMsg){
         if (CollectionUtils.isEmpty(coll))
             throw new BasicRuntimeException(errMsg);
     }
@@ -97,7 +97,7 @@ public class CheckUtls {
      * @param coll
      * @param errCode
      */
-    public void noeEmpty(Collection coll,ErrCodeConstant errCode){
+    public static void notEmpty(Collection coll,ErrCodeConstant errCode){
         if (CollectionUtils.isEmpty(coll))
             throw new BasicRuntimeException(errCode);
     }
