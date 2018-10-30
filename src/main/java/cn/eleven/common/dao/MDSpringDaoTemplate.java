@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * @author: eleven
- * @date: 2017/10/21 13:03
+ * @date: 2017/10/21
  * @Description: 实体对象和mongo数据库集合映射关系
  * 1.如果实体对象类头有{@link org.springframework.data.mongodb.core.mapping.Document}注解，则使用注解配置的集合映射；
  * 2.如果实体对象类头不存在注解，则默认为实体对象类的首字母小写进行映射；

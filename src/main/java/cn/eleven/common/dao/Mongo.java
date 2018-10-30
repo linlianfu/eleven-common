@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.validation.annotation.Validated;
 /**
  * @author: eleven
- * @date: 2017/10/21 13:03
+ * @date: 2017/10/21
  * @Description: 默认的集合名为类名首字母小写，所以当不传集合名字时，则类名必须和数据库集合名一致
  */
 @Validated

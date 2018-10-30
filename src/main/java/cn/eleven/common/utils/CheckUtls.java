@@ -10,7 +10,7 @@ import java.util.Collection;
 
 /**
  * @author: eleven
- * @date: 2018/9/8 15:11
+ * @date: 2018/9/8
  * @description: 参数常规检查工具
  */
 public class CheckUtls {
