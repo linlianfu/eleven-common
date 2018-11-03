@@ -1,4 +1,4 @@
-package cn.eleven.common.except;
+package cn.eleven.common.exception;
 
 import lombok.Data;
 

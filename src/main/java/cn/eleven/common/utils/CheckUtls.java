@@ -1,7 +1,7 @@
 package cn.eleven.common.utils;
 
-import cn.eleven.common.except.BasicRuntimeException;
-import cn.eleven.common.except.ErrCodeConstant;
+import cn.eleven.common.exception.BasicRuntimeException;
+import cn.eleven.common.exception.ErrCodeConstant;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;

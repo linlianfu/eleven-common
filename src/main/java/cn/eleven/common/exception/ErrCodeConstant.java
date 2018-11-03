@@ -1,4 +1,4 @@
-package cn.eleven.common.except;
+package cn.eleven.common.exception;
 
 import lombok.Data;
 
@@ -21,7 +21,7 @@ public class ErrCodeConstant {
     private String message;
 
 
-    ErrCodeConstant(String code, String message){
+    protected ErrCodeConstant(String code, String message){
         this.code = code;
         this.message = message;
     }

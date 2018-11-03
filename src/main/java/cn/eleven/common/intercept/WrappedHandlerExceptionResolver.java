@@ -1,8 +1,8 @@
 package cn.eleven.common.intercept;
 
 
-import cn.eleven.common.except.BasicRuntimeException;
-import cn.eleven.common.except.ErrCodeConstant;
+import cn.eleven.common.exception.BasicRuntimeException;
+import cn.eleven.common.exception.ErrCodeConstant;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.method.HandlerMethod;
