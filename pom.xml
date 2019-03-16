@@ -11,7 +11,14 @@
     <properties>
         <slf4j_version>1.7.6</slf4j_version>
     </properties>
+
     <dependencies>
+        <!--zookeeper分布式锁-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>4.0.1</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>

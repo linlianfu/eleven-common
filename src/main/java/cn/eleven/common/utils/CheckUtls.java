@@ -101,4 +101,23 @@ public class CheckUtls {
         if (CollectionUtils.isEmpty(coll))
             throw new BasicRuntimeException(errCode);
     }
+
+    /**
+     * 不为空的检查
+     * @param errorMessage
+     */
+    public static void notNull(Object object,String errorMessage){
+        if (object == null)
+            throw new BasicRuntimeException(errorMessage);
+
+    }
+    /**
+     * 不为空的检查
+     * @param errCode
+     */
+    public static void notNull(Object object,ErrCodeConstant errCode){
+        if (object == null)
+            throw new BasicRuntimeException(errCode);
+
+    }
 }
